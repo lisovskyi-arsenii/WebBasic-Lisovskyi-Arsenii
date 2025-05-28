@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="color"] {
+            width: 60px;
+            height: 35px;
+            border: none;
+            padding: 0;
+            vertical-align: middle;
+        }
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            margin-top: 5px;
+        }
+        .radio-group label {
+            font-weight: normal;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Додати викладача</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="full_name">Повне ім'я: </label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Стать: </label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="чоловіча" required>
+                    <label for="male">Чоловіча</label>
+                    <input type="radio" id="female" name="gender" value="жіноча">
+                    <label for="female">Жіноча</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="date-of-birth">Дата народження: </label>
+                <input type="date" id="date-of-birth" name="date-of-birth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Електрона пошта: </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Номер телефону: </label>
+                <input type="phone" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bg_color">Бажаний колір фону: </label>
+                <input type="color" id="bg_color" name="bg_color" value="#ffffff">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Країна: </label>
+                <select id="country" name="country" required>
+                    <option value="">Оберіть країну</option>
+                    <option value="Україна">Україна</option>
+                    <option value="Польща">Польща</option>
+                    <option value="Німеччина">Німеччина</option>
+                    <option value="США">США</option>
+                    <option value="Канада">Канада</option>
+                    <option value="Італія">Італія</option>
+                    <option value="Інше">Інше</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Місто: </label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Коментар: </label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Додати</button>
+        </form>
+    </div>
+</body>
+</html>

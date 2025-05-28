@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 15px;
+            max-width: 1200px;
+        }
+
+        .teacher-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+            background-color: #fff;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .teacher-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #007bff;
+        }
+        .teacher-card h2 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.4em;
+        }
+        .teacher-card h3 {
+            margin: 5px 0;
+            color: #555;
+            font-size: 1em;
+            font-weight: normal;
+        }
+        .teacher-card p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <h1>Наші викладачі</h1>
+        <div class="cards">
+            <div class="teacher-card">
+                <img src="images/teacher.png" alt="Teacher's photo">
+                <h2>Ім'я викладача 1</h2>
+                <h3>Стать: Чоловіча</h3>
+                <h3>Вік: 35</h3>
+                <h3>Email: teacher1@example.com</h3>
+                <h3>Телефон: +380 50 123 4567</h3>
+                <h3>Місто: Київ</h3>
+                <h3>Країна: Україна</h3>
+                <p>Досвідчений викладач математики з 10-річним стажем. Любить інноваційні методи навчання.</p>
+            </div>
+
+            <div class="teacher-card">
+                <img src="images/teacher.png" alt="Teacher's photo">
+                <h2>Ім'я викладача 2</h2>
+                <h3>Стать: Жіноча</h3>
+                <h3>Вік: 42</h3>
+                <h3>Email: teacher2@example.com</h3>
+                <h3>Телефон: +380 67 987 6543</h3>
+                <h3>Місто: Львів</h3>
+                <h3>Країна: Україна</h3>
+                <p>Спеціаліст з англійської мови, яка використовує інтерактивні вправи для залучення студентів.</p>
+            </div>
+
+            <div class="teacher-card">
+                <img src="images/teacher.png" alt="Teacher's photo">
+                <h2>Ім'я викладача 3</h2>
+                <h3>Стать: Чоловіча</h3>
+                <h3>Вік: 28</h3>
+                <h3>Email: teacher3@example.com</h3>
+                <h3>Телефон: +380 93 111 2233</h3>
+                <h3>Місто: Одеса</h3>
+                <h3>Країна: Україна</h3>
+                <p>Молодий та амбітний викладач фізики, який робить складні теми зрозумілими.</p>
+            </div>
+
+            <div class="teacher-card">
+                <img src="images/teacher.png" alt="Teacher's photo">
+                <h2>Ім'я викладача 4</h2>
+                <h3>Стать: Жіноча</h3>
+                <h3>Вік: 50</h3>
+                <h3>Email: teacher4@example.com</h3>
+                <h3>Телефон: +380 95 444 5566</h3>
+                <h3>Місто: Харків</h3>
+                <h3>Країна: Україна</h3>
+                <p>Професор літератури з багаторічним досвідом, її лекції завжди надихають.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
