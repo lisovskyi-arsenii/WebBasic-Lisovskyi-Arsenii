@@ -354,7 +354,7 @@ body {
     .badge-visible {
         position: relative;
         color: white;
-        font-size: 0; /* приховує текст "Badge" */
+        font-size: 0;
     }
 
     .badge-visible::after {
