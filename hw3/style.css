@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.main-container {
+    display: flex;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 95%;
+}
+
+.block {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.left-block {
+    flex: 2;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-item-section {
+    display: flex;
+    gap: 10px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-item-section input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #ffffff;
+}
+
+.add-item-section button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.add-item-section button:hover {
+    background-color: #0056b3;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 120px 120px 40px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.item.bought {
+    background-color: #f8fff8;
+    border-color: #d4edda;
+}
+
+.item-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 1em;
+}
+
+.item.bought .item-name {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-controls .increase-quantity {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.quantity-controls .decrease-quantity {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.item-quantity {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+
+.toggle-bought-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    min-width: 90px;
+    text-align: center;
+    background-color: #bebdb9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    color: #333;
+}
+
+.not-bought {
+    margin-left: 70px;
+}
+
+.remove-item-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-block {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-block h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.item-summary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    min-height: 40px;
+}
+
+.item-summary-tags .tag {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.item-summary-tags .tag .count {
+    background-color: #f1821b;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+    min-height: 18px;
+    text-align: center;
+}
+
+.editable-input {
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    background-color: #ffffff;
+    font-weight: 500;
+    color: #333;
+    width: 60px;
+}
+
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #663399;
+    color: white;
+    padding: 15px 25px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, height 0.3s ease;
+    z-index: 1000;
+    min-width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.badge:hover {
+    transform: translateY(-40px);
+    background-color: #8A2BE2;
+    height: 100px;
+}
+
+.badge-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.badge-visible {
+    position: relative;
+    top: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.badge-hidden {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
+    font-size: 0.9em;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.badge:hover .badge-hidden {
+    opacity: 1;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background-color: #663399;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform-origin: bottom center;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    border: 5px solid transparent;
+    border-top-color: #663399;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform-origin: bottom center;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+@media print {
+    .badge-visible {
+        position: relative;
+        color: white;
+        font-size: 0;
+    }
+
+    .badge-visible::after {
+        content: "Робота: Лісовського Арсенія";
+        font-size: 14px;
+        color: #663399;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .badge {
+        background-color: white !important;
+        border: 2px solid #663399 !important;
+    }
+}
+
+
+/* Responsive design for columns */
+@media (max-width: 650px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .left-block, .right-block {
+        min-height: 100%;
+        flex: none;
+    }
+
+    .item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .item-name {
+        flex-basis: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1000px) {
+    .main-container {
+        flex-direction: row;
+    }
+    
+    .left-block {
+        flex: 2;
+    }
+    
+    .right-block {
+        flex: 1;
+    }
+}
