@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-block">
+            <div class="add-item-section">
+                <input type="text" placeholder="Назва товару" id="item-name-input">
+                <button id="add-item-btn" type="submit" class="tooltip" data-tooltip="Додати новий товар до списку">Додати</button>
+            </div>
+            <ul class="items">
+                <li class="item bought" data-item-name="Помідори">
+                    <span class="item-name"><del>Помідори</del></span>
+                    <div class="quantity-controls">
+                        <span class="item-quantity">2</span>
+                    </div>
+                    <button class="toggle-bought-btn not-bought tooltip" data-tooltip="Позначити як куплений">Не куплено</button>
+                </li>
+
+                <li class="item" data-item-name="Печиво">
+                    <span class="item-name">Печиво</span>
+                    <div class="quantity-controls">
+                        <button class="decrease-quantity tooltip" data-tooltip="Зменшити кількість">-</button>
+                        <span class="item-quantity">2</span>
+                        <button class="increase-quantity tooltip" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="toggle-bought-btn tooltip" data-tooltip="Позначити як не куплений">Куплено</button>
+                    <button class="remove-item-btn tooltip" data-tooltip="Видалити товар">×</button>
+                </li>
+
+                <li class="item" data-item-name="Сир">
+                    <span class="item-name">Сир</span>
+                    <div class="quantity-controls">
+                        <button class="decrease-quantity tooltip" data-tooltip="Зменшити кількість">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="increase-quantity tooltip" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="toggle-bought-btn tooltip" data-tooltip="Позначити як не куплений">Куплено</button>
+                    <button class="remove-item-btn tooltip" data-tooltip="Видалити товар">×</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right-block">
+            <h2>Залишилось</h2>
+            <hr>
+            <div class="item-summary-tags" id="remaining-tags">
+                <!-- Теги будуть додані автоматично через JavaScript -->
+            </div>
+            <hr>
+            <h2>Куплено</h2>
+            <hr>
+            <div class="item-summary-tags" id="bought-tags">
+                <!-- Теги будуть додані автоматично через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- бейдж -->
+    <div class="badge">
+        <div class="badge-content">
+            <div class="badge-visible">BuyList</div>
+            <div class="badge-hidden">Робота: Лісовського Арсенія</div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
