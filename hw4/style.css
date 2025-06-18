@@ -127,6 +127,81 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .header_title {
+        font-size: 1rem;
+    }
+    .header_nav-list {
+        gap: 0.5rem;
+    }
+    .pizza-gallery {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+        padding: 1rem 0.2rem;
+    }
+    .pizza-card {
+        padding: 0.5rem 0.1rem 1.5rem 0.1rem;
+    }
+    .pizza-name {
+        font-size: 1rem;
+    }
+    .pizza-price {
+        font-size: 0.98rem;
+    }
+    .pizza-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        width: 100%;
+    }
+    .add-cart-btn {
+        width: 90%;
+        margin: 0.5rem auto 0 auto;
+        display: block;
+    }
+    .qty-btn, .qty-value {
+        margin: 0 0.2rem;
+    }
+    .cart-modal-content {
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+        max-width: 98vw;
+    }
+    #cartTotal {
+        font-size: 1rem;
+    }
+    .footer {
+        font-size: 0.95rem;
+        padding: 0.7rem 0 0.5rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .header_title {
+        font-size: 0.85rem;
+    }
+    .pizza-name {
+        font-size: 0.92rem;
+    }
+    .pizza-price {
+        font-size: 0.9rem;
+    }
+    .add-cart-btn, .qty-btn {
+        font-size: 0.85rem;
+        width: 24px;
+        height: 24px;
+    }
+    .cart-modal-content {
+        padding: 0.4rem 0.1rem 0.4rem 0.1rem;
+    }
+    #cartTotal {
+        font-size: 0.92rem;
+    }
+    .footer {
+        font-size: 0.85rem;
+        padding: 0.5rem 0 0.3rem 0;
+    }
+}
+
 .pizza-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
